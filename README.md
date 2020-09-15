@@ -1,6 +1,6 @@
 # Github Search
 
-O objetivo deste projeto é criar uma página para consumir 3 endpoints da API do Github. 
+O objetivo deste projeto foi criar uma página para consumir 3 endpoints da API do Github. 
 
 Trata-se de uma página de busca, que procura por usuários específicos, e oferece: 
 
