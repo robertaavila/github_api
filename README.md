@@ -13,7 +13,7 @@ Trata-se de uma página de busca, que procura por usuários específicos, e ofer
 
 O resultado foi o seguinte: 
 
-<img src="https://github.com/robertaavila/github_api/blob/dev/imgs/github_search.png">
+<img src="https://github.com/robertaavila/github_api/blob/dev/imgs/github_search.png" width="500px" height="auto">
 
 ## Como rodar a aplicação
 
