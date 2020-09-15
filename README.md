@@ -12,7 +12,7 @@ Trata-se de uma página de busca, que procura por usuários específicos, e ofer
 ## Visualização
 
 O resultado foi o seguinte: 
-<img src="imgs/github_search.png">
+<img src="./imgs/github_search.png">
 
 ## Como rodar a aplicação
 
