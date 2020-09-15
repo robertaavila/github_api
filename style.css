@@ -1,0 +1,54 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    text-align: left;
+}
+
+.path {
+    stroke-dasharray: 6000;
+    stroke-dashoffset: 0;
+    animation: arrow_path 3s linear forwards;
+    stroke: red;
+    stroke-width: 20;
+}
+
+@keyframes arrow_path {
+    from {
+        opacity: 0;
+        stroke-dashoffset: 6000;
+    }
+    to {
+        opacity: 1;
+        stroke-dashoffset: 0;
+    }
+}
+
+#result {
+    display: none;
+}
+
+#resultRepos {
+    display: none;
+}
+
+#resultStars {
+    display: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.title {
+    margin-top: 4.5vw;
+}
+
+.wrapper {
+    max-width: 15%;
+    margin: 2vw;
+}
