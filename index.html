@@ -41,7 +41,7 @@
             </button>
         </div>
         <div class="card mx-auto" id="result">
-            <div class="card-header">
+            <div class="card-header" id="header">
                 Usuário do Github
             </div>
             <div class="row">
@@ -49,7 +49,7 @@
                     <img src="" alt="" id="imgResult" class="col-md-12"/>
                 </div>
                 <div class="column col-md-8">
-                    <div class="card-body">
+                    <div class="card-body" id="userData">
                         <p>Para ver a página do usuário clique no link abaixo:</p>
                         <a href="" class="card-text" id="urlResult" target="_blank">
                             <h5 class="card-title" id="loginResult"></h5>
@@ -58,7 +58,7 @@
                             Repositórios
                         </button>
                         <button class="btn btn-primary" onclick="getStarred()">
-                            Starred
+                            Favoritos
                         </button>
                     </div>
                     <div class="card-body" id="resultRepos">

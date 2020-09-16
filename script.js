@@ -9,13 +9,28 @@ function getUser() {
             return;
         }
         fetch("https://api.github.com/users/" + search)
-            .then((result) => result.json())
-            .then((data) => {
-                document.getElementById('loginResult').innerHTML = `${data.login}`;
-                document.getElementById('urlResult').href = `${data.html_url}`;
-                document.getElementById('result').style.display = "flex";
-                document.getElementById('imgResult').src = `${data.avatar_url}`;
+            .then(result => {
+                if (result.status == 404) {
+                    document.getElementById('result').style.display = "flex";
+                    document.getElementById('header').innerHTML = "Usuário não encontrado.";
+                    document.getElementById('userData').style.display = "none";
+                    document.getElementById('imgResult').style.display = "none";
+                    return;
+                } else  if (result.status !== 200) {
+                    console.log('Erro na consulta. Código do status: ' +
+                        result.status);
+                    return;
+                } else {
+                    console.log("ok");
+                    result.json() .then((data) => {
+                        document.getElementById('loginResult').innerHTML = `${data.login}`;
+                        document.getElementById('urlResult').href = `${data.html_url}`;
+                        document.getElementById('result').style.display = "flex";
+                        document.getElementById('imgResult').src = `${data.avatar_url}`;
+                    })
+                }
             })
+
     })
 }
 
@@ -28,7 +43,7 @@ function getRepos() {
             if (!result.ok) {
                 throw Error("Erro na busca. ");
             }
-            return result.json();
+            return console.log(result.json());
         })
         .then(data => {
             const info = data.map(item => {
@@ -41,7 +56,7 @@ function getRepos() {
                 .insertAdjacentHTML("afterbegin", info);
         })
         .catch(error => {
-            console.log(error)
+            console.log(error);
         });
 }
 
@@ -67,6 +82,6 @@ function getStarred() {
                 .insertAdjacentHTML("afterbegin", info);
         })
         .catch(error => {
-            console.log(error)
+            console.log(error);
         });
 }
